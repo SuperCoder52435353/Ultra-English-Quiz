@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale1.0">
+    <title>Umumiy Natijalar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="results-page">
+        <h1 class="animate-title">Umumiy Natijalar (FAQAT ADMIN UCHUN)</h1>
+        <div class="results-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Foydalanuvchi</th>
+                        <th>Daraja</th>
+                        <th>Natija</th>
+                        <th>Ball</th>
+                        <th>Sana</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="allResults"></tbody>
+            </table>
+        </div>
+        <div class="admin-controls">
+            <button onclick="clearAllResults()" class="admin-btn">Barcha Natijalarni Tozalash</button>
+            <button onclick="generateReport()" class="admin-btn">Hisobot Tayyorlash</button>
+            <button onclick="filterResultsByUser()" class="admin-btn">Foydalanuvchi bo‘yicha Filtrlash</button>
+            <button onclick="sortResultsByScore()" class="admin-btn">Ball bo‘yicha Saralash</button>
+            <button onclick="restrictUser()" class="admin-btn">Foydalanuvchi Cheklash</button>
+            <button onclick="viewUserStats()" class="admin-btn">Foydalanuvchi Statistikasi</button>
+        </div>
+        <button onclick="goBack()" class="back-btn">Orqaga qaytish</button>
+    </div>
+    <div class="footer">
+        Made with Abduraxmon
+    </div>
+    <script src="script.js"></script>
+    <script>
+        displayAllResults();
+    </script>
+</body>
+</html>

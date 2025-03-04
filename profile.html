@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <div id="admin-login" class="admin-login-container" style="display: none;">
+        <h2>Administrator kirish</h2>
+        <input type="password" id="adminPassword" placeholder="Parolni kiriting" class="input-field">
+        <button onclick="checkAdminPassword()" class="confirm-btn">Kirish</button>
+        <p id="adminError" class="error"></p>
+    </div>
+
+    <div id="profile-page" class="profile-page" style="display: none;">
+        <h1 class="profile-title">Profilingiz</h1>
+        <div class="creator-info animate-creator">Creator: Mavlonov Admin Abduraxmon</div>
+        <div class="profile-card">
+            <div class="profile-header">
+                <h2 id="userFullName" class="animate-header"></h2>
+                <p id="userAge" class="animate-age"></p>
+            </div>
+            <div class="profile-content">
+                <h3 class="animate-section">Natijalar</h3>
+                <div id="resultsList" class="results-list animate-results"></div>
+                <h3 class="animate-section">Umumiy Ball</h3>
+                <p id="overallScore" class="animate-score"></p>
+                <h3 class="animate-section">Eng yaxshi natija</h3>
+                <p id="bestResult" class="animate-score"></p>
+            </div>
+        </div>
+        <button onclick="goBack()" class="back-btn">Orqaga qaytish</button>
+    </div>
+    <div class="footer">
+        Made with Abduraxmon
+    </div>
+    <script src="script.js"></script>
+    <script>
+        checkProfileAccess();
+    </script>
+</body>
+</html>
